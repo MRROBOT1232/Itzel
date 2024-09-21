@@ -185,3 +185,18 @@ canvas {
         transform: translateY(0);
     }
 }
+.Poema {
+    margin-top: 20px;
+    padding: 15px;
+    border: 2px solid #FFD700; /* Un borde dorado */
+    border-radius: 10px; /* Bordes redondeados */
+    background-color: rgba(255, 255, 255, 0.1); /* Fondo amarillo claro */
+    text-align: center; /* Centrar el texto */
+    font-family: 'Inclusive Sans', sans-serif; /* Asegúrate de usar la fuente deseada */
+    color: #ffffff; /* Color del texto */
+}
+
+.Poema p {
+    font-size: 18px; /* Tamaño de fuente */
+    line-height: 1.5; /* Espaciado entre líneas */
+}
