@@ -1,0 +1,187 @@
+/* Estilo general del cuerpo */
+body {
+    margin: 0;
+    font-family: 'Inclusive Sans', sans-serif;
+    background: linear-gradient(70deg, #fff0f5, #ffccff, #ff99cc);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+    text-align: center;
+    padding-top: 200px; /* Para empujar el contenido hacia abajo */
+}
+
+/* Título principal */
+h1 {
+    font-size: 80px;
+    color: #ff69b4;
+    font-weight: bold;
+}
+
+.Con-2 {
+    display: none;
+}
+
+/* Canvas para flores */
+canvas {
+    display: block;
+}
+
+/* Contenedor principal */
+.Contenedor {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 20px;
+}
+
+/* Botones principales */
+.Con {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.Texto {
+    display: none;
+}
+
+.Texto h2 {
+    font-size: 50px;
+    color: #ff1493;
+}
+
+#B12 {
+    margin-left: 30px;
+}
+
+/* Estilo de los botones */
+.Button {
+    font-family: monospace;
+    font-size: x-large;
+    transition-duration: 0.3s;
+    padding: 15px;
+    border-radius: 10px;
+    background-color: #ff69b4;
+    color: white;
+    border: 2px solid pink;
+    cursor: pointer;
+}
+
+/* Hover de los botones */
+.Button:hover {
+    transform: scale(1.2);
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    color: white;
+    background-color: #ff1493;
+}
+
+/* Contenedor de la imagen y botón inicial */
+.Contenedor-Binicio {
+    display: flex;
+    justify-content: center; /* Centrar el contenido */
+    align-items: center; /* Alinear verticalmente */
+    margin-top: 10px;
+}
+/* Estilo de la caja emergente */
+.Con-Emergente {
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    display: flex;
+}
+
+/* Caja emergente */
+.cua {
+    display: none;
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 320px;
+    padding: 30px;
+    background-color: #fffaf0;
+    border: 2px solid #ff69b4;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    animation: aparecer 0.5s ease-out;
+}
+
+/* Animación de aparición */
+@keyframes aparecer {
+    0% {
+        opacity: 0;
+        transform: translateX(-50%) translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(-50%) translateY(0);
+    }
+}
+
+@media (max-width: 468px) {
+    body {
+        background: linear-gradient(100deg, white, #ffccff, #ff99cc);
+        display: flex;
+        flex-direction: column;
+        justify-content: center; 
+        align-items: center; 
+        padding-top: 100px; 
+        height: 100vh; 
+    }
+
+    .Contenedor-Binicio {
+        display: flex;
+        justify-content: center; /* Centrar el contenido */
+        align-items: center; /* Alinear verticalmente */
+        margin-top: 10px;
+    }
+
+    .imagen-clase {
+        width: 150px; /* Ajusta el tamaño de las imágenes */
+        margin: 50px 50px; /* Más margen a la derecha */
+        border: 5px solid #ff99cc; /* Marco decorativo para las imágenes */
+        border-radius: 15px; /* Bordes redondeados */
+        animation: mover 1s infinite; /* Aplicar la animación */
+    }
+
+    .Button {
+        font-size: large;
+        padding: 10px;
+        margin: 20px; /* Espacio entre el botón y las imágenes */
+    }
+}
+
+/* Imagen con estilo, animación y marco decorativo */
+.imagen-clase {
+    width: 150px; /* Ajusta el tamaño de las imágenes */
+    margin: 20px; /* Espacio entre las imágenes y el botón */
+    border: 5px solid #ff99cc; /* Marco decorativo para las imágenes */
+    border-radius: 15px; /* Bordes redondeados */
+    animation: mover 1s infinite; /* Aplicar la animación */
+}
+
+/* Animación para la imagen */
+@keyframes imagenAparecer {
+    0% {
+        transform: scale(1); /* Tamaño normal */
+    }
+    100% {
+        transform: scale(1.05); /* Crece ligeramente */
+    }
+}
+@keyframes mover {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px); /* Movimiento hacia arriba */
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
